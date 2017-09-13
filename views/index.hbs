@@ -1,0 +1,38 @@
+<!-- Page Content -->
+<div class="row view-product-area">
+    <div class="showCartBox hide">
+        <p>Price: <span class="price"></span></p>
+        <div class="close" onClick="closeShowPrice(event);">X</div>
+    </div>
+    <div class="col-md-12">
+        <div class="productDescp js-productDescription">
+            <h4>Hover on Items for view Prodcut Description</h4>
+            <div class="hide row onHoverDescription js-onHover">
+                <div class="col-sm-2 col-lg-2 col-md-2 imageWrap">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/320x150" class="imageCont" alt="">
+                    </div>
+                </div>        
+                <div class="col-sm-8 col-lg-8 col-md-8 middleDescription">
+                    <p class="description">See more snippets like this online store item at</p>
+                    <ul class="featureList">
+                        <li>Energy star qualified</li>
+                        <li>Energy star qualified</li>
+                        <li>Energy star qualified</li>
+                    </ul>
+                </div>        
+                <div class="col-sm-2 col-lg-2 col-md-2 addCartWrap">
+                    <a onClick="showPrice();" class="btn btn-info js-addToCart">Add to Cart</a>
+                    <p class="cartPrice">24.99</p>
+                </div>        
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    {{#each products}}
+       {{> product}}
+    {{/each}}
+</div>
